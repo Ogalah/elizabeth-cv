@@ -1,0 +1,147 @@
+:root {
+  --accent: #0ca678;
+  --accent-light: #b2f2bb;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --bg: #f7fafc;
+  --white: #ffffff;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --radius: 16px;
+}
+
+body {
+  font-family: 'Lato', 'Roboto', sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.left {
+  padding: 30px 25px;
+  background: linear-gradient(180deg, rgba(12,166,120,0.1), rgba(12,166,120,0.03));
+  border-right: 1px solid #e6e6e6;
+}
+
+.photo {
+  height: 160px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), #22c1c3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
+}
+
+.contact, .section-title, .list {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.section-title {
+  font-weight: 700;
+  color: var(--text);
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.list {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.right {
+  padding: 40px 35px;
+}
+
+.profile h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.profile .title {
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.job {
+  margin-bottom: 25px;
+}
+
+.job h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.job h4 {
+  margin: 3px 0 10px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.job ul {
+  color: var(--muted);
+  margin: 0;
+  padding-left: 18px;
+}
+
+footer {
+  margin-top: 35px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #099268;
+}
+
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+}
